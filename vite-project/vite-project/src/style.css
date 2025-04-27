@@ -1,0 +1,18 @@
+:root {
+  --primary: #87CEEB;
+  --secondary: rgb(155, 199, 227);
+  --accent: #FFB74D;
+  --light: #F3F9FD;
+  --dark: #0D47A1;
+  --success: #4DD0E1;
+  --warning: #FFD54F;
+  --info: #29B6F6;
+}
+
+body {
+  font-family: 'Noto Sans SC', sans-serif;
+  color: var(--dark);
+  background-color: var(--light);
+  margin: 0;
+  padding: 0;
+}
