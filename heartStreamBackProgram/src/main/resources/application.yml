@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: heartStreamBack
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  #配置数据库的连接信息
+  datasource:
+    #使用时将your_database_name替换为你的数据库名称
+    #将your_username替换为你的数据库用户名
+    #将替换为你的数据库密码
+    url: jdbc:mysql://localhost:3306/your_database_name
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: your_username
+    password: your_password
+
+#Mybatis的相关配置
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    #开启驼峰命名映射开关
+    map-underscore-to-camel-case: true
+
+#JPA的相关配置
+jpa:
+  hibernate:
+    ddl-auto: update
+  show-sql: true
+  properties:
+    hibernate:
+      dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+
+oss:
+  endpoint: http://oss-cn-guangzhou.aliyuncs.com
+  
